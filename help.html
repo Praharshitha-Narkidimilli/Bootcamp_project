@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Indian Slum Areas</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+#slumList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.slumCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 15px;
+    width: 300px;
+}
+
+.slumCard h2 {
+    color: #333;
+}
+
+.slumCard p {
+    color: #666;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Slum Areas in India</h1>
+    </header>
+
+    <section id="slumList">
+
+    </section>
+
+    <script >
+        const slumAreas = [
+    { name: 'Dharavi, Mumbai', details: 'One of the largest slums in Asia.Densely populated with small-scale industries, including recycling, pottery, and textiles.Faces challenges like overcrowding, poor sanitation, and limited access to basic amenities.' },
+    { name:' Annawadi, Mumbai, Maharashtra',details:'Located near Mumbai International Airport.    Featured in the book "Behind the Beautiful Forevers" by Katherine Boo, highlighting issues of poverty and inequality.' },
+    { name: 'Sunder Nagri, Delhi',details:'Located in the northeastern part of Delhi.Faces challenges such as inadequate housing, sanitation issues, and limited access to education and healthcare.'},
+    { name: 'Sunder Nagri, Delhi',details:'Located in the northeastern part of Delhi.Faces challenges such as inadequate housing, sanitation issues, and limited access to education and healthcare.' },
+  
+];
+
+
+function populateSlumList() {
+    const slumListContainer = document.getElementById('slumList');
+
+    slumAreas.forEach((slum) => {
+        const slumCard = document.createElement('div');
+        slumCard.classList.add('slumCard');
+
+        slumCard.innerHTML = `
+            <h2>${slum.name}</h2>
+            <p>${slum.details}</p>
+        `;
+
+        slumListContainer.appendChild(slumCard);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', populateSlumList);
+    </script>
+    <p style="font-size:50px;">HELP US!</p>
+    <button type="submit" class="btn1">Donate</button>
+</body>
+</html>

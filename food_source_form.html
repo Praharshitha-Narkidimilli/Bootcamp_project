@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../images/restaurant1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .login-container {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+  }
+  .form {
+    text-align: left;
+    
+  }
+  .login-container h2 {
+    
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666666;
+  }.form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  .form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    margin-bottom: 15px;
+  }
+  .errmsg{
+    background-color: green;
+    color: white;
+    border-radius: 30px;;
+  }
+  .form button:hover {
+    background-color: #0056b3;
+  }
+  .form .forgot-password {
+    color: #999999;
+  }
+</style>
+</head>
+<body>
+<div class="login-container" style="background-color: gainsboro;">
+  <h2>Restaurant</h2>
+  
+  <form class="form" method="post" action="formsubmit">
+    <label for="Restaurant Name"><b>Name of the Restaurant:</b></label>
+    <input type="text" id="Restaurant Name" name="name" placeholder="enter restaurant name" required>
+    
+    <label for="address"><b>Address:</b></label>
+    <textarea name="Address" id="address" cols="52" rows="10" placeholder="enter restaurant address"></textarea>
+    
+    <label for="number"><b>No.of Food Items:</b></label>
+    <input type="text" id="number" name="Food Items" placeholder="enter no.of food items" required>
+    <label for="food"><b>Food Details:</b></label>
+    <textarea name="food" id="food" cols="52" rows="15" placeholder=" enter fooditem-quantity"></textarea> 
+    
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+    
+</html>
